@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# 추가 설정들
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'ckeditor',
+
+    'blog',
 ]
 
 MIDDLEWARE = [
