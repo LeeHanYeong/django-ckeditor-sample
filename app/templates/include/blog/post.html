@@ -1,0 +1,7 @@
+<div class="post card mb-2">
+	<div class="card-body">
+		<h5 class="card-title"><a href="{% url 'text-post-detail' pk=post.pk %}">{{ post.title }}</a></h5>
+		<hr>
+		<p class="card-text">{{ post.content|safe }}</p>
+	</div>
+</div>

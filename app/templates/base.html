@@ -9,13 +9,15 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- CKEditor -->
+	<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
 </head>
 <body>
 	<div id="wrap">
 		<div id="container" class="container mt-2">
-			<h1 class="mb-3">django-ckeditor Sample</h1>
-			<a href="" class="btn btn-primary btn-create-post">+ Create Post</a>
-
+			<h1 class="mb-3"><a href="{% url 'index' %}">django-ckeditor Sample</a></h1>
 			{% block title %}{% endblock %}
 			{% block content %}
 			{% endblock %}

@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
-    path('', views.TextPostList.as_view(), name='post-list'),
-    path('create/', views.TextPostCreate.as_view(), name='post-create'),
+    path('', views.Index.as_view(), name='index'),
+    path('text/', views.TextPostList.as_view(), name='text-post-list'),
+    path('text/<int:pk>/', views.TextPostDetail.as_view(), name='text-post-detail'),
+    path('text/create/', views.TextPostCreate.as_view(), name='text-post-create'),
 ]

@@ -5,15 +5,10 @@
 {% endblock %}
 
 {% block content %}
+<a href="{% url 'text-post-create' %}" class="btn btn-primary btn-create-post">+ Create Post</a>
 <div class="textpost-list">
 	{% for post in posts %}
-		<div class="post card">
-			<div class="card-body">
-				<h5 class="card-title">{{ post.title }}</h5>
-				<hr>
-				<p class="card-text">{{ post.content|safe }}</p>
-			</div>
-		</div>
+		{% include 'include/blog/post.html' %}
 	{% endfor %}
 </div>
 {% endblock %}

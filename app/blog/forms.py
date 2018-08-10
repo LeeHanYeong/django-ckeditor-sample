@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import TextInput
 
 from .models import TextPost
 
@@ -10,3 +11,10 @@ class TextPostForm(forms.ModelForm):
             'title',
             'content',
         )
+        widgets = {
+            'title': TextInput(
+                attrs={
+                    'class': 'form-control',
+                }
+            ),
+        }
