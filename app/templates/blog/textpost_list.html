@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2>TextPost List</h2>
+{% endblock %}
+
+{% block content %}
+<div class="textpost-list">
+	{% for post in posts %}
+		<div class="post card">
+			<div class="card-body">
+				<h5 class="card-title">{{ post.title }}</h5>
+				<hr>
+				<p class="card-text">{{ post.content|safe }}</p>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}
